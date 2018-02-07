@@ -14,13 +14,14 @@ namespace WF001
 {
     public partial class Login : System.Web.UI.Page
     {
-        public string lang = "ES";
+        public string lang;
         public Language idioma = new Language();
         protected void Page_Load(object sender, EventArgs e)
         {
             string user = Request.Form["user_name"];
             string pass = Request.Form["user_pass"];
 
+            lang = "ES";
             string json = File.ReadAllText(Server.MapPath("\\lang\\" + lang + ".json"));
             MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(json));
             DataContractJsonSerializer ser = new DataContractJsonSerializer(idioma.GetType());
