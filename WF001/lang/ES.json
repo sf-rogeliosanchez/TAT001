@@ -1,0 +1,10 @@
+﻿{
+  "name": "Español",
+  "es": "Español",
+  "en": "Inglés",
+  "login": "Iniciar Sesión",
+  "user": "Usuario",
+  "pass": "Contraseña",
+  "enter": "Ingresar",
+  "user_error": "Usuario/Contraseña incorrecta"
+}
