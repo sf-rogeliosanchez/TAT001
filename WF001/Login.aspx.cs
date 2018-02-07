@@ -21,7 +21,7 @@ namespace WF001
             string user = Request.Form["user_name"];
             string pass = Request.Form["user_pass"];
 
-            string json = File.ReadAllText("F:\\RSG\\Visual\\WF002\\WF001\\lang\\" + lang + ".json");
+            string json = File.ReadAllText(Server.MapPath("\\lang\\" + lang + ".json"));
             MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(json));
             DataContractJsonSerializer ser = new DataContractJsonSerializer(idioma.GetType());
             idioma = ser.ReadObject(ms) as Language;
