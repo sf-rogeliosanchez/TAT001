@@ -15,5 +15,12 @@ namespace WF001.Models
         public string pass { get; set; }
         public string enter { get; set; }
         public string user_error { get; set; }
+        public string lista_precio { get; set; }
+        public string pedidos { get; set; }
+        public string tabla { get; set; }
+        public string nombre { get; set; }
+        public string version { get; set; }
+        public string precio { get; set; }
+        public string salir { get; set; }
     }
 }
