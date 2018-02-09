@@ -39,7 +39,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <form id="form1" runat="server" action="Login.aspx">
+            <form id="form1" runat="server">
                 <div class="row">
                     <div class="col s12 m6 offset-m3">
                         <div class="card horizontal hoverable">
@@ -60,7 +60,8 @@
                                     </div>
                                 </div>
                                 <div class="card-action">
-                                    <input class="waves-effect waves-green btn-flat right" value="<%=idioma.enter %>" type="submit" />
+                                    <asp:Button ID="btn_login" runat="server" Text="" class="waves-effect waves-green btn-flat right" OnClick="Button1_Click"/>
+                                    <%--<input class="waves-effect waves-green btn-flat right" value="<%=idioma.enter %>" type="submit" />--%>
                                 </div>
                             </div>
                         </div>

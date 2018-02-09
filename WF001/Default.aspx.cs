@@ -23,7 +23,7 @@ namespace WF001
             string name = Context.User.Identity.Name;
 
             lang = "EN";
-            string json = File.ReadAllText(Server.MapPath("\\lang\\" + lang + ".json"));
+            string json = File.ReadAllText(Server.MapPath("~\\lang\\" + lang + ".json"));
             MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(json));
             DataContractJsonSerializer ser = new DataContractJsonSerializer(idioma.GetType());
             idioma = ser.ReadObject(ms) as Language;

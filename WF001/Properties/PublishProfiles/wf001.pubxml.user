@@ -10,37 +10,49 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/IBusiness.dll">
-      <publishTime>01/30/2018 14:27:38</publishTime>
+      <publishTime>02/07/2018 17:11:05</publishTime>
     </File>
     <File Include="bin/IEntities.dll">
       <publishTime>01/30/2018 14:27:38</publishTime>
     </File>
     <File Include="bin/IPersistence.dll">
-      <publishTime>01/30/2018 14:27:38</publishTime>
+      <publishTime>02/07/2018 17:11:04</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll">
-      <publishTime>05/11/2011 12:51:42</publishTime>
+      <publishTime>02/07/2018 11:10:50</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll">
-      <publishTime>05/11/2011 12:51:42</publishTime>
+      <publishTime>02/07/2018 11:10:53</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.ServiceLocation.dll">
-      <publishTime>01/06/2011 21:23:58</publishTime>
+      <publishTime>02/07/2018 11:10:50</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.Unity.dll">
-      <publishTime>08/02/2012 13:50:32</publishTime>
+      <publishTime>02/07/2018 11:10:53</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.Unity.Interception.dll">
-      <publishTime>08/02/2012 13:50:32</publishTime>
+      <publishTime>02/07/2018 11:10:53</publishTime>
     </File>
     <File Include="bin/WF001.dll">
-      <publishTime>01/02/2018 17:12:29</publishTime>
+      <publishTime>02/09/2018 17:01:17</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>02/02/2018 14:29:57</publishTime>
+      <publishTime>02/09/2018 14:55:28</publishTime>
+    </File>
+    <File Include="images/sf-logo.jpg">
+      <publishTime>02/09/2018 17:00:04</publishTime>
+    </File>
+    <File Include="lang/EN.json">
+      <publishTime>02/07/2018 17:09:31</publishTime>
+    </File>
+    <File Include="lang/ES.json">
+      <publishTime>02/07/2018 17:09:35</publishTime>
+    </File>
+    <File Include="List.aspx">
+      <publishTime>02/09/2018 17:00:18</publishTime>
     </File>
     <File Include="Login.aspx">
-      <publishTime>02/02/2018 14:22:00</publishTime>
+      <publishTime>02/09/2018 15:53:20</publishTime>
     </File>
     <File Include="Logout.aspx">
       <publishTime>01/30/2018 17:43:32</publishTime>
@@ -88,7 +100,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>01/30/2018 15:25:34</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/30/2018 14:27:39</publishTime>
+      <publishTime>02/07/2018 17:11:05</publishTime>
     </File>
   </ItemGroup>
 </Project>
