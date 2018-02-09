@@ -15,20 +15,26 @@
 </head>
 <body>
     <div class="navbar-fixed">
-        <nav>
+        <nav class="nav-extended">
             <div class="nav-wrapper pink darken-1">
                 <a href="#!" class="brand-logo">Logo</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Lista de precio</a></li>
-                    <li><a href="badges.html">Pedidos</a></li>
+                    <li><a href="List.aspx"><%=idioma.lista_precio %></a></li>
+                    <li><a href="List.aspx"><%=idioma.pedidos %></a></li>
                 </ul>
             </div>
+            <%--            <div class="nav-content pink darken-1">
+                <span class="nav-title">Title</span>
+                <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal">
+                    <i class="material-icons">add</i>
+                </a>
+            </div>--%>
         </nav>
     </div>
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Lista de precio</a></li>
-        <li><a href="badges.html">Pedidos</a></li>
+        <li><a href="List.aspx"><%=idioma.lista_precio %></a></li>
+        <li><a href="List.aspx"><%=idioma.pedidos %></a></li>
     </ul>
     <script type="text/javascript">
         var elem = document.querySelector('.sidenav');
@@ -41,7 +47,7 @@
 
                 <div class="row">
                     <div class="col s12 m1 l12 l12">
-                        <h1 class="">Inicio</h1>
+                        <h1 class=""><%=idioma.tabla %></h1>
                     </div>
                 </div>
                 <div class="row">
@@ -51,15 +57,15 @@
                 </div>
                 <div class="row">
                     <div class="col s12">
-                        <asp:Button ID="btnLogout" runat="server" Text="Salir" CssClass="btn" OnClick="btnLogout_Click" />
+                        <asp:Button ID="btnLogout" runat="server" Text="" CssClass="btn" OnClick="btnLogout_Click" />
                     </div>
                 </div>
                 <table class="highlight">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Item Name</th>
-                            <th>Item Price</th>
+                            <th><%=idioma.nombre %></th>
+                            <th><%=idioma.version %></th>
+                            <th><%=idioma.precio %></th>
                         </tr>
                     </thead>
 

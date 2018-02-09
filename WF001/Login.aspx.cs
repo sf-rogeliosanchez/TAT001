@@ -22,11 +22,47 @@ namespace WF001
             string pass = Request.Form["user_pass"];
 
             lang = "ES";
-            string json = File.ReadAllText(Server.MapPath("\\lang\\" + lang + ".json"));
+            string json = File.ReadAllText(Server.MapPath("~\\lang\\" + lang + ".json"));
             MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(json));
             DataContractJsonSerializer ser = new DataContractJsonSerializer(idioma.GetType());
             idioma = ser.ReadObject(ms) as Language;
             ms.Close();
+
+            btn_login.Text = idioma.enter;
+
+            //try
+            //{
+            //    if (!user.Equals(null) && !pass.Equals(null))
+            //    {
+            //        if (existeUsuario(user, pass))
+            //        {
+            //            FormsAuthentication.RedirectFromLoginPage(user, true);
+            //        }
+            //        else
+            //        {
+            //            lblError.Text = idioma.user_error;
+            //        }
+            //    }
+
+            //}
+            //catch
+            //{
+            //    lblError.Text = "";
+            //}
+        }
+
+        public bool existeUsuario(string u, string p)
+        {
+            if (u.Equals("admin"))
+                if (p.Equals("admin"))
+                    return true;
+            return false;
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string user = user_name.Value;
+            string pass = user_pass.Value;
 
             try
             {
@@ -47,14 +83,6 @@ namespace WF001
             {
                 lblError.Text = "";
             }
-        }
-
-        public bool existeUsuario(string u, string p)
-        {
-            if (u.Equals("admin"))
-                if (p.Equals("admin"))
-                    return true;
-            return false;
         }
     }
 }

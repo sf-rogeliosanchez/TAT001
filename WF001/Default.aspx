@@ -20,8 +20,8 @@
                 <a href="#!" class="brand-logo">Logo</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html"><%=idioma.lista_precio %></a></li>
-                    <li><a href="badges.html"><%=idioma.pedidos %></a></li>
+                    <li><a href="List.aspx"><%=idioma.lista_precio %></a></li>
+                    <li><a href="List.aspx"><%=idioma.pedidos %></a></li>
                 </ul>
             </div>
             <%--            <div class="nav-content pink darken-1">
@@ -33,8 +33,8 @@
         </nav>
     </div>
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html"><%=idioma.lista_precio %></a></li>
-        <li><a href="badges.html"><%=idioma.pedidos %></a></li>
+        <li><a href="List.aspx"><%=idioma.lista_precio %></a></li>
+        <li><a href="List.aspx"><%=idioma.pedidos %></a></li>
     </ul>
     <script type="text/javascript">
         var elem = document.querySelector('.sidenav');
