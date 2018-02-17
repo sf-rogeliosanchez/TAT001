@@ -16,7 +16,7 @@
 <body>
     <nav>
         <div class="nav-wrapper pink darken-1">
-            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#!" class="brand-logo"><img src="images/logo_kellogg.png" /></a>
             <%--<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="sass.html">Sass</a></li>
