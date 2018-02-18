@@ -33,6 +33,9 @@
             </div>
         </li>
         <li>
+            <a id="cerrar-menu" href="#!" data-target="slide-out" class="sidenav-close pink darken-1" onclick="cerrar();"><i class="material-icons right white-text" style="margin:0;font-size: 1.3rem;">menu</i></a>
+        </li>
+        <li>
             <div class="user-view" style="padding: 0">
                 <div class="background pink darken-1">
                     <%--<img src="images/office.jpg">--%>
@@ -50,10 +53,6 @@
                 </table>
             </div>
         </li>
-        <%--<li><a href="#!">Catálogos</a></li>
-        <li><a href="#!">Sincronización</a></li>
-        <li><a href="#!">Presupuesto</a></li>
-        <li><a href="#!">Acuerdo comercial</a></li>--%>
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
                 <li class="bold"><a class="collapsible-header waves-effect waves-teal">Catálogos</a>
@@ -91,7 +90,7 @@
             </ul>
         </li>
         <li class="bold"><a href="#!">Solicitudes financieras</a></li>
-        <li><a id="cerrar-menu" href="#!" data-target="slide-out" class="sidenav-close" onclick="cerrar();"><i class="material-icons">menu</i></a></li>
+
     </ul>
     <script>
         var elem = document.querySelector('.sidenav');
@@ -105,13 +104,9 @@
 
         function abrir(controler) {
             var c = document.getElementById("container").style.paddingLeft = '300px';
-            var d = document.getElementById("btn-menu").style.paddingLeft = '280px';
-            var d = document.getElementById("btn-menu2").style.paddingLeft = '280px';
         }
         function cerrar() {
             var c = document.getElementById("container").style.paddingLeft = '0px';
-            var d = document.getElementById("btn-menu").style.paddingLeft = '0px';
-            var d = document.getElementById("btn-menu2").style.paddingLeft = '0px';
         }
     </script>
     <style type="text/css">
@@ -141,21 +136,16 @@
     </style>
 
     <%--<a href="#" data-target="slide-out" class="sidenav-trigger" onclick="abrir(this);" style="color: rgba(0, 0, 0, 0.87); display: block; font-size: 14px; font-weight: 500; height: 48px; line-height: 48px;"><i class="material-icons">menu</i></a>--%>
-    <div id="btn-menu" style="padding-left:280px;">
-        <a class="sidenav-trigger btn pink darken-1" data-target="slide-out" onclick="abrir(this);" style="z-index:0">
+    <div id="btn-menu">
+        <a class="sidenav-trigger btn pink darken-1" data-target="slide-out" onclick="abrir(this);" style="z-index: 0">
             <i class="large material-icons">menu</i>
         </a>
     </div>
-    <div id="btn-menu2" style="padding-left:280px;">
+    <%--    <div id="btn-menu2" style="padding-left:280px;">
         <a class="sidenav-trigger btn pink" data-target="slide-out" onclick="cerrar2(this);" style="z-index:0">
             <i class="large material-icons">menu</i>
         </a>
-    </div>
-    <script>
-        function cerrar2() {
-            document.getElementById("cerrar-menu").click();
-        }
-    </script>
+    </div>--%>
     <div id="container" class="container">
         <div class="row">
             <form id="form1" runat="server">
