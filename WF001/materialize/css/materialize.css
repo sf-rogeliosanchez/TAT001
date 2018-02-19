@@ -3434,7 +3434,7 @@ nav ul a span.badge {
 
 .container {
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 100%;
     width: 90%;
 }
 
@@ -3446,7 +3446,7 @@ nav ul a span.badge {
 
 @media only screen and (min-width: 993px) {
     .container {
-        width: 70%;
+        width: 98%;
     }
 }
 

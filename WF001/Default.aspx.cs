@@ -1,16 +1,13 @@
-﻿using IEntities;
-using IBusiness;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Json;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.Security;
 using WF001.Models;
-using System.IO;
-using System.Runtime.Serialization.Json;
-using System.Text;
 
 namespace WF001
 {
@@ -28,13 +25,6 @@ namespace WF001
             DataContractJsonSerializer ser = new DataContractJsonSerializer(idioma.GetType());
             idioma = ser.ReadObject(ms) as Language;
             ms.Close();
-
-            btnLogout.Text = idioma.salir;
-        }
-
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Logout.aspx");
         }
     }
 }

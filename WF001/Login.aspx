@@ -41,7 +41,7 @@
         <div class="row">
             <form id="form1" runat="server">
                 <div class="row">
-                    <div class="col s12 m6 offset-m3">
+                    <div class="col s12 m6 l3 offset-m3 offset-l4">
                         <div class="card horizontal hoverable">
                             <div class="card-stacked">
                                 <div class="card-content">

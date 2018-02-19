@@ -9,9 +9,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using WF001.Models;
 
-namespace WF001
+
+namespace WF001.Provision
 {
-    public partial class List : System.Web.UI.Page
+    public partial class Nuevo : System.Web.UI.Page
     {
         public string lang;
         public Language idioma = new Language();
