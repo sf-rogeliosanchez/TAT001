@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     <meta name="theme-color" content="#d81b60" />
-    <title>Lista</title>
+    <title>Crear Provisión</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="../materialize/css/g-materialize.css" rel="stylesheet" />
     <link href="../materialize/css/materialize.css" rel="stylesheet" />
@@ -24,7 +24,7 @@
             </div>
         </nav>
     </div>
-    <ul id="slide-out" class="sidenav sidenav-fixed" style="z-index: 998;">
+    <ul id="slide-out" class="sidenav sidenav-fixed" style="z-index: 998;transform:translateX(-105%)">
         <li>
             <div class="navbar-fixed">
                 <div class="nav-wrapper pink darken-1" style="height: 68px;">
@@ -54,10 +54,11 @@
                 </table>
             </div>
         </li>
-        <li class="bold"><a href="../Default.aspx"><i class="material-icons">apps</i>WorkPlace</a></li>
+        <li class="bold"><a href="#!"><i class="material-icons">account_balance</i>Solicitudes financieras</a></li>
+        <li class="bold"><a href="#"><i class="material-icons">apps</i>WorkPlace</a></li>
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
-                <li class="bold"><a class="collapsible-header waves-effect waves-teal"><i class="material-icons">book</i>Catálogos</a>
+                <li class="bold"><a class="collapsible-header waves-effect waves-teal"><i class="material-icons">thumbs_up_down</i>Acuerdo Comercial</a>
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="color.html">Color</a></li>
@@ -65,7 +66,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="bold"><a class="collapsible-header waves-effect waves-teal"><i class="material-icons">sync</i>Sincronización</a>
+                <li class="bold"><a class="collapsible-header waves-effect waves-teal"><i class="material-icons">trending_up</i>Presupuesto</a>
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="badges.html">Badges</a></li>
@@ -73,7 +74,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="bold"><a class="collapsible-header waves-effect waves-teal"><i class="material-icons">trending_up</i>Presupuesto</a>
+                <li class="bold"><a class="collapsible-header waves-effect waves-teal"><i class="material-icons">sync</i>Sincronización</a>
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="autocomplete.html">Autocomplete</a></li>
@@ -81,7 +82,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="bold"><a class="collapsible-header waves-effect waves-teal"><i class="material-icons">thumbs_up_down</i>Acuerdo Comercial</a>
+                <li class="bold"><a class="collapsible-header waves-effect waves-teal"><i class="material-icons">book</i>Catálogos</a>
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="autocomplete.html">Autocomplete</a></li>
@@ -91,13 +92,11 @@
                 </li>
             </ul>
         </li>
-        <li class="bold"><a href="#!"><i class="material-icons">account_balance</i>Solicitudes financieras</a></li>
     </ul>
     <script>
-        var elem = document.querySelector('.sidenav');
-        var options = [];
-        var instance = M.Sidenav.init(elem, options);
-
+        //var elem = document.querySelector('.sidenav');
+        //var options = [];
+        //var instance = M.Sidenav.init(elem, options);
 
         var elem = document.querySelector('.collapsible');
         var options = [];
@@ -180,9 +179,9 @@
                         <label for="bu">BU</label>
                     </div>
                     <div class="col s12 m4 l4 right">
-                        <input type="button" class="btn-small" value="Cancelar" runat="server" style="margin-top:1.5rem;"/>
-                        <input type="button" class="btn-small" value="Borrador" runat="server" style="margin-top:1.5rem;" />
-                        <input type="button" class="btn-small" value="Guardar" runat="server" style="margin-top:1.5rem;" />
+                        <input type="button" class="btn-small" value="Cancelar" runat="server" style="margin-top: 1.5rem;" />
+                        <input type="button" class="btn-small" value="Borrador" runat="server" style="margin-top: 1.5rem;" />
+                        <input type="button" class="btn-small" value="Guardar" runat="server" style="margin-top: 1.5rem;" />
                     </div>
                 </div>
                 <div class="divider pink darken-1"></div>
@@ -240,14 +239,14 @@
         </div>
     </div>
     <script>        
-        //var hide = getCookie('menu.hide');
-        //if (hide == 'true') {
-        //    var c = document.getElementById("container").style.paddingLeft = '0px';
-        //    document.getElementById('slide-out').style.transform = 'translateX(-105%)';
-        //} else {
-        //    var c = document.getElementById("container").style.paddingLeft = '300px';
-        //    document.getElementById('slide-out').style.transform = 'translateX(0%)';
-        //}
+        var hide = getCookie('menu.hide');
+        if (hide == 'true') {
+            var c = document.getElementById("container").style.paddingLeft = '0px';
+            document.getElementById('slide-out').style.transform = 'translateX(-105%)';
+        } else {
+            var c = document.getElementById("container").style.paddingLeft = '300px';
+            document.getElementById('slide-out').style.transform = 'translateX(0%)';
+        }
 </script>
 </body>
 </html>
