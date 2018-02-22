@@ -209,6 +209,7 @@ namespace IPersistence.SQL
                 DB.AddInParameter(Command, "@APELLIDO_P", DbType.String, string.Empty);
                 DB.AddInParameter(Command, "@APELLIDO_M", DbType.String, string.Empty);
                 DB.AddInParameter(Command, "@EMAIL", DbType.String, string.Empty);
+                DB.AddInParameter(Command, "@SPRAS_ID", DbType.String, string.Empty);
                 DB.AddInParameter(Command, "@ACTIVO", DbType.Boolean, false);
                 DB.AddInParameter(Command, "@ACCION", DbType.Int32, Constants.AccionesTabla.GET);
 

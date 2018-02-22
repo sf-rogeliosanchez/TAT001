@@ -14,7 +14,11 @@
     </asp:ContentPlaceHolder>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="menu" runat="server">
-
+    <script>
+        var pp = sessionStorage["pais"];
+        if (pp == undefined || pp == "")
+            sessionStorage["pais"] = '<%=pais %>';
+    </script>
     <div class="navbar-fixed" style="z-index: 998;">
         <nav class="nav-extended">
             <div class="nav-wrapper pink darken-1" <%-- style="background-repeat: repeat-x;background-image: url(/images/header-transient.png);"--%>>
@@ -52,6 +56,15 @@
                     var elem = document.querySelector('.dropdown-trigger');
                     var options = [];
                     var instance = M.Dropdown.init(elem, options);
+
+                    var image = "/images/flags/4x3/" + sessionStorage["pais"] + ".svg"
+                    document.getElementById('menu_imgPais').src = image;
+
+                    function cambiaPais(id) {
+                        var pais = id.split('-')[1];
+                        sessionStorage["pais"] = pais;
+                        document.getElementById('menu_imgPais').src = "/images/flags/4x3/" + pais + ".svg";
+                    }
                 </script>
             </div>
         </nav>

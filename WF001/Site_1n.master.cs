@@ -12,6 +12,7 @@ namespace WF001
 {
     public partial class Site_1n : System.Web.UI.MasterPage
     {
+        public string pais = "";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -29,7 +30,6 @@ namespace WF001
             int nivel = thisURLs.Length;
 
             lblUser.Text = m.getUsuario(user_name);
-
             if (!thisURLs[thisURLs.Length - 1].Equals("SelPais.aspx"))
             {
                 int cont = 0;
@@ -56,8 +56,7 @@ namespace WF001
             }
 
             lblMenu.Text = m.getMenu(user_name, thisURL, nivel, pp, cc);
-
-            string pais = "";
+            
             if (thisURLs[thisURLs.Length - 1].Equals("SelPais.aspx"))
             {
                 nav_mobile.Visible = false;
@@ -68,7 +67,7 @@ namespace WF001
                 if (ap.paisSeleccionado(Session["pais"]))
                 {
                     pais = ap.getPais(Session["pais"]);
-                    imgPais.Src = "images/flags/4x3/" + pais + ".svg";
+                    //imgPais.Src = "images/flags/4x3/" + pais + ".svg";
                 }
                 else
                     Response.Redirect("SelPais.aspx");

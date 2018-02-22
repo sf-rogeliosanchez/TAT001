@@ -14,9 +14,9 @@
     </asp:ContentPlaceHolder>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="menu" runat="server">
-
     <script>
-        if (sessionStorage["pais"] == "")
+        var pp = sessionStorage["pais"];
+        if (pp == undefined || pp == "")
             sessionStorage["pais"] = '<%=pais %>';
     </script>
     <div class="navbar-fixed" style="z-index: 998;">
@@ -57,7 +57,8 @@
                     var options = [];
                     var instance = M.Dropdown.init(elem, options);
 
-                    document.getElementById('menu_imgPais').src = "/images/flags/4x3/" + sessionStorage["pais"] + ".svg";
+                    var image = "/images/flags/4x3/" + sessionStorage["pais"] + ".svg"
+                    document.getElementById('menu_imgPais').src = image;
 
                     function cambiaPais(id) {
                         var pais = id.split('-')[1];
@@ -95,11 +96,9 @@
                     </tr>
                 </table>
             </div>
-
         </li>
         <asp:Label ID="lblMenu" runat="server" Text=""></asp:Label>
     </ul>
-    <input type="hidden" id="hid_ps" runat="server" />
     <script src="../js/menu.js"></script>
     <link href="../css/sideMenu.css" rel="stylesheet" />
 </asp:Content>
