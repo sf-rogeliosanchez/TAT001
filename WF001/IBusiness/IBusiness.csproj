@@ -130,6 +130,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CARPETA_BLL.cs" />
+    <Compile Include="PAGINA_BLL.cs" />
+    <Compile Include="USUARIO_BLL.cs" />
     <Compile Include="REQUISICION_BLL.cs" />
     <Compile Include="VALOR_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

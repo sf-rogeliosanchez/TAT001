@@ -30,5 +30,14 @@ namespace IPersistence
         public abstract List<REQUISICION_BE> REQUISICION_GET(int id);
         public abstract int REQUISICION_INSERT(REQUISICION_BE V);
         #endregion
+        #region USUARIO
+        public abstract USUARIO_BE USUARIO_GET(string id);
+        #endregion
+        #region PERMISO
+        public abstract List<PAGINA_BE> PERMISO_GET(string id);
+        #endregion
+        #region CARPETA
+        public abstract List<CARPETA_BE> CARPETA_GET(string id);
+        #endregion
     }
 }

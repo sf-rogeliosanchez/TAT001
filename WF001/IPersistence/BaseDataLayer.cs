@@ -126,5 +126,89 @@ namespace IPersistence
             }
             return z;
         }
+
+        public USUARIO_BE USUARIO_GET(IDataReader reader)
+        {
+            USUARIO_BE z = new USUARIO_BE();
+            try
+            {
+                while (reader.Read())
+                {
+
+                    z.ID = reader["ID"].ToString();
+                    z.PASS = reader["PASS"].ToString();
+                    z.ROL_ID = Int32.Parse(reader["ID_GR"].ToString());
+                    z.NOMBRE_ROL = reader["NOMBRE_GR"].ToString();
+                    z.NOMBRE = reader["NOMBRE"].ToString() + " "
+                        + reader["APELLIDO_P"].ToString() + " "
+                        + reader["APELLIDO_M"].ToString();
+                    z.EMAIL = reader["EMAIL"].ToString();
+                    z.ACTIVO = bool.Parse(reader["ACTIVO"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                reader.Close();
+            }
+            return z;
+        }
+        public List<PAGINA_BE> PERMISO_GET(IDataReader reader)
+        {
+            List<PAGINA_BE> zz = new List<PAGINA_BE>();
+            try
+            {
+                while (reader.Read())
+                {
+                    PAGINA_BE z = new PAGINA_BE();
+                    z.ID = reader["ID"].ToString();
+                    z.URL = reader["URL"].ToString();
+                    z.PAG_ID = Int32.Parse(reader["ID_PAG"].ToString());
+                    z.CAR_URL = reader["CAR_URL"].ToString();
+                    z.CAR_ID = Int32.Parse(reader["CAR_ID"].ToString());
+                    z.TITULO = reader["TITULO"].ToString();
+                    z.ICONO = reader["ICONO"].ToString();
+                    zz.Add(z);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                reader.Close();
+            }
+            return zz;
+        }
+
+        public List<CARPETA_BE> CARPETA_GET(IDataReader reader)
+        {
+            List<CARPETA_BE> zz = new List<CARPETA_BE>();
+            try
+            {
+                while (reader.Read())
+                {
+                    CARPETA_BE z = new CARPETA_BE();
+                    z.ID = Int32.Parse( reader["car_ID"].ToString());
+                    z.URL = reader["car_URL"].ToString();
+                    z.TITULO = reader["car_TIT"].ToString();
+                    z.ICONO = reader["ICONO"].ToString();
+                    zz.Add(z);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                reader.Close();
+            }
+            return zz;
+        }
     }
 }

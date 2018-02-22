@@ -60,10 +60,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\flags\1x1\ec.svg" />
+    <Content Include="images\flags\1x1\mx.svg" />
+    <Content Include="css\sideMenu.css" />
     <Content Include="Default.aspx" />
+    <Content Include="images\flags\1x1\pr.svg" />
+    <Content Include="images\flags\4x3\ec.svg" />
+    <Content Include="images\flags\4x3\mx.svg" />
+    <Content Include="images\flags\4x3\pr.svg" />
     <Content Include="images\header-transient.png" />
     <Content Include="images\logo_kellogg.png" />
     <Content Include="images\sf-logo.jpg" />
+    <Content Include="js\menu.js" />
+    <Content Include="js\sideMenu.js" />
     <Content Include="Logout.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="materialize\css\g-materialize.css" />
@@ -71,7 +80,10 @@
     <Content Include="materialize\css\materialize.min.css" />
     <Content Include="materialize\js\materialize.js" />
     <Content Include="materialize\js\materialize.min.js" />
+    <Content Include="Presupuesto\Default.aspx" />
+    <Content Include="Provision\Enviar.aspx" />
     <Content Include="Provision\Nuevo.aspx" />
+    <Content Include="SelPais.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,14 +108,60 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\accionesPais.cs" />
+    <Compile Include="Models\accionesUsuario.cs" />
+    <Compile Include="Models\Cryptography.cs" />
     <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\SideMenu.cs" />
+    <Compile Include="Presupuesto\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presupuesto\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provision\Enviar.aspx.cs">
+      <DependentUpon>Enviar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Provision\Enviar.aspx.designer.cs">
+      <DependentUpon>Enviar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Provision\Nuevo.aspx.cs">
       <DependentUpon>Nuevo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Provision\Nuevo.aspx.designer.cs">
       <DependentUpon>Nuevo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SelPais.aspx.cs">
+      <DependentUpon>SelPais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelPais.aspx.designer.cs">
+      <DependentUpon>SelPais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site_2n.master.cs">
+      <DependentUpon>Site_2n.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_2n.master.designer.cs">
+      <DependentUpon>Site_2n.master</DependentUpon>
+    </Compile>
+    <Compile Include="Site_1n.master.cs">
+      <DependentUpon>Site_1n.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site_1n.master.designer.cs">
+      <DependentUpon>Site_1n.master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +178,9 @@
     <Content Include="lang\ES.json" />
     <Content Include="lang\EN.json" />
     <None Include="Properties\PublishProfiles\wf001.pubxml" />
+    <Content Include="Site.Master" />
+    <Content Include="Site_1n.master" />
+    <Content Include="Site_2n.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

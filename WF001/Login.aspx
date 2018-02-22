@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WF001.Login" culture="auto" meta:resourcekey="PageResource1" uiculture="auto" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WF001.Login" Culture="auto" meta:resourcekey="PageResource1" UICulture="auto" %>
 
 <!DOCTYPE html>
 
@@ -16,26 +16,11 @@
 <body>
     <nav>
         <div class="nav-wrapper pink darken-1">
-            <a href="#!" class="brand-logo"><img src="images/logo_kellogg.png" /></a>
-            <%--<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
-            </ul>
-            <ul class="sidenav" id="mobile-demo">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
-            </ul>--%>
+            <a href="index.html" class="brand-logo darken-1">
+                <img src="images/logo_kellogg.png"  style="padding-top: 8px;padding-left: 8px;"/>
+            </a>
+            <%--<a href="#!" class="brand-logo"><img src="images/logo_kellogg.png" /></a>--%>
         </div>
-        <script type="text/javascript">
-            //var elem = document.querySelector('.sidenav');
-            //var options = [];
-            //var instance = M.Sidenav.init(elem, options);
-        </script>
     </nav>
     <div class="container">
         <div class="row">
@@ -45,7 +30,7 @@
                         <div class="card horizontal hoverable">
                             <div class="card-stacked">
                                 <div class="card-content">
-                                   
+
                                     <h4><%=idioma.login %></h4>
                                     <div class="row">
                                         <div class="input-field col s12">
@@ -60,7 +45,7 @@
                                     </div>
                                 </div>
                                 <div class="card-action">
-                                    <asp:Button ID="btn_login" runat="server" Text="" class="waves-effect waves-green btn-flat right" OnClick="Button1_Click"/>
+                                    <asp:Button ID="btn_login" runat="server" Text="" class="waves-effect waves-green btn-flat right" OnClick="Button1_Click" />
                                     <%--<input class="waves-effect waves-green btn-flat right" value="<%=idioma.enter %>" type="submit" />--%>
                                 </div>
                             </div>

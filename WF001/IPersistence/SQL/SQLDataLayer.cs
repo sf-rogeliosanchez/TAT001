@@ -43,7 +43,6 @@ namespace IPersistence.SQL
             }
         }
         #endregion
-
         #region VALOR
         public override int VALOR_INSERT(VALOR_BE z)
         {
@@ -55,7 +54,7 @@ namespace IPersistence.SQL
                 Database DB = DatabaseFactory.CreateDatabase();
                 using (TransactionScope MyTranasaccion = new TransactionScope())
                 {
-                    
+
                     Command = DB.GetStoredProcCommand(Constants.CSP_VALOR);
 
                     DB.AddInParameter(Command, "@ID", DbType.String, string.Empty);
@@ -183,6 +182,88 @@ namespace IPersistence.SQL
                 DB.AddInParameter(Command, "@ACCION", DbType.Int32, Constants.AccionesTabla.GET_B);
 
                 return REQUISICION_GET(DB.ExecuteReader(Command));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Command.Dispose();
+            }
+        }
+        #endregion
+        #region USUARIO
+
+        public override USUARIO_BE USUARIO_GET(string id)
+        {
+            DbCommand Command = null;
+            try
+            {
+                Database DB = DatabaseFactory.CreateDatabase();
+                Command = DB.GetStoredProcCommand(Constants.CSP_USUARIO);
+
+                DB.AddInParameter(Command, "@ID", DbType.String, id);
+                DB.AddInParameter(Command, "@PASS", DbType.String, string.Empty);
+                DB.AddInParameter(Command, "@NOMBRE", DbType.String, string.Empty);
+                DB.AddInParameter(Command, "@APELLIDO_P", DbType.String, string.Empty);
+                DB.AddInParameter(Command, "@APELLIDO_M", DbType.String, string.Empty);
+                DB.AddInParameter(Command, "@EMAIL", DbType.String, string.Empty);
+                DB.AddInParameter(Command, "@ACTIVO", DbType.Boolean, false);
+                DB.AddInParameter(Command, "@ACCION", DbType.Int32, Constants.AccionesTabla.GET);
+
+                return USUARIO_GET(DB.ExecuteReader(Command));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Command.Dispose();
+            }
+        }
+        #endregion
+        #region PERMISO
+
+        public override List<PAGINA_BE> PERMISO_GET(string id)
+        {
+            DbCommand Command = null;
+            try
+            {
+                Database DB = DatabaseFactory.CreateDatabase();
+                Command = DB.GetStoredProcCommand(Constants.CSP_PERMISO);
+
+                DB.AddInParameter(Command, "@ID", DbType.String, id);
+                DB.AddInParameter(Command, "@ACCION", DbType.Int32, Constants.AccionesTabla.GET);
+
+                return PERMISO_GET(DB.ExecuteReader(Command));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Command.Dispose();
+            }
+        }
+        #endregion
+
+        #region PERMISO
+
+        public override List<CARPETA_BE> CARPETA_GET(string id)
+        {
+            DbCommand Command = null;
+            try
+            {
+                Database DB = DatabaseFactory.CreateDatabase();
+                Command = DB.GetStoredProcCommand(Constants.CSP_CARPETA);
+
+                DB.AddInParameter(Command, "@ID", DbType.String, id);
+                DB.AddInParameter(Command, "@ACCION", DbType.Int32, Constants.AccionesTabla.GET);
+
+                return CARPETA_GET(DB.ExecuteReader(Command));
             }
             catch (Exception ex)
             {

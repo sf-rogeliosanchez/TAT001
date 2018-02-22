@@ -4478,8 +4478,8 @@ nav .brand-logo {
     color: #fff;
     display: inline-block;
     font-size: 2.1rem;
-    padding-top: 8px;
-    padding-left: 8px;
+    /*padding-top: 8px;
+    padding-left: 8px;*/
 }
 
     nav .brand-logo.center {
@@ -4493,8 +4493,8 @@ nav .brand-logo {
     color: #fff;
     display: inline-block;
     font-size: 2.1rem;
-    padding-top: 8px;
-    padding-left: 8px;
+    /*padding-top: 8px;
+    padding-left: 8px;*/
 }
 
     .brand-logo.center {

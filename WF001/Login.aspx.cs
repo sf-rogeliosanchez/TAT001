@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using IBusiness;
+using IEntities;
+using System;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization.Json;
 using System.Text;
-using System.Web;
 using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using WF001.Models;
 
 namespace WF001
@@ -29,34 +26,6 @@ namespace WF001
             ms.Close();
 
             btn_login.Text = idioma.enter;
-
-            //try
-            //{
-            //    if (!user.Equals(null) && !pass.Equals(null))
-            //    {
-            //        if (existeUsuario(user, pass))
-            //        {
-            //            FormsAuthentication.RedirectFromLoginPage(user, true);
-            //        }
-            //        else
-            //        {
-            //            lblError.Text = idioma.user_error;
-            //        }
-            //    }
-
-            //}
-            //catch
-            //{
-            //    lblError.Text = "";
-            //}
-        }
-
-        public bool existeUsuario(string u, string p)
-        {
-            if (u.Equals("admin"))
-                if (p.Equals("admin"))
-                    return true;
-            return false;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -68,16 +37,15 @@ namespace WF001
             {
                 if (!user.Equals(null) && !pass.Equals(null))
                 {
-                    if (existeUsuario(user, pass))
-                    {
+                    USUARIO_BE u = USUARIO_BLL.GET(user);
+                    //u.ID = "admin";
+                    //u.PASS = "8K4LMN4Q1LKv/FUvbck3QA==";
+                    accionesUsuario aU = new accionesUsuario();
+                    if (aU.existeUsuario(u, user, pass))
                         FormsAuthentication.RedirectFromLoginPage(user, true);
-                    }
                     else
-                    {
                         lblError.Text = idioma.user_error;
-                    }
                 }
-
             }
             catch
             {

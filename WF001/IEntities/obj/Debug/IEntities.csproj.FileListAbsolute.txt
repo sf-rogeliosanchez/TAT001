@@ -118,3 +118,9 @@ F:\RSG\Visual\WF001\WF001\IEntities\bin\Debug\IEntities.pdb
 F:\RSG\Visual\WF001\WF001\IEntities\obj\Debug\IEntities.dll
 F:\RSG\Visual\WF001\WF001\IEntities\obj\Debug\IEntities.pdb
 F:\RSG\Visual\WF001\WF001\IEntities\obj\Debug\IEntities.csprojResolveAssemblyReference.cache
+C:\Users\SF-0020\Documents\GitHub\TAT001\WF001\IEntities\obj\Debug\IEntities.csprojResolveAssemblyReference.cache
+C:\Users\SF-0020\Documents\GitHub\TAT001\WF001\IEntities\obj\Debug\IEntities.csproj.CoreCompileInputs.cache
+C:\Users\SF-0020\Documents\GitHub\TAT001\WF001\IEntities\obj\Debug\IEntities.dll
+C:\Users\SF-0020\Documents\GitHub\TAT001\WF001\IEntities\obj\Debug\IEntities.pdb
+C:\Users\SF-0020\Documents\GitHub\TAT001\WF001\IEntities\bin\Debug\IEntities.dll
+C:\Users\SF-0020\Documents\GitHub\TAT001\WF001\IEntities\bin\Debug\IEntities.pdb

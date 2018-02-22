@@ -12,6 +12,9 @@ namespace IPersistence
        public const string CSP_FORMULARIO = "CSP_FORMULARIO";
        public const string CSP_VALOR = "CSP_VALOR";
        public const string CSP_REQUISICION = "CSP_REQUISICION";
+        public const string CSP_USUARIO = "CSP_USUARIO";
+        public const string CSP_PERMISO = "CSP_PERMISO";
+        public const string CSP_CARPETA = "CSP_CARPETA";
 
         #endregion
 

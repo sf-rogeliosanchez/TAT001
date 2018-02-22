@@ -1,229 +1,175 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WF001.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site_1n.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WF001.Default1" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <meta name="theme-color" content="#d81b60" />
-    <title>Inicio</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link href="materialize/css/materialize.css" rel="stylesheet" />
-
-    <script src="materialize/js/materialize.js"></script>
-</head>
-<body>
-    <div class="navbar-fixed">
-        <nav class="nav-extended">
-            <div class="nav-wrapper pink darken-1">
-                <a href="#!" class="brand-logo">Logo</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="List.aspx"><%=idioma.lista_precio %></a></li>
-                    <li><a href="List.aspx"><%=idioma.pedidos %></a></li>
-                </ul>
-            </div>
-            <%--            <div class="nav-content pink darken-1">
-                <span class="nav-title">Title</span>
-                <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal">
-                    <i class="material-icons">add</i>
-                </a>
-            </div>--%>
-        </nav>
-    </div>
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="List.aspx"><%=idioma.lista_precio %></a></li>
-        <li><a href="List.aspx"><%=idioma.pedidos %></a></li>
-    </ul>
-    <script type="text/javascript">
-        var elem = document.querySelector('.sidenav');
-        var options = [];
-        var instance = M.Sidenav.init(elem, options);
-    </script>
-    <div class="container">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Workplace</title>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="title" runat="server">
+    <h4 class="">Workplace</h4>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="form" runat="server">
+    <form id="form1" runat="server">
         <div class="row">
-            <form id="form1" runat="server">
-
-                <div class="row">
-                    <div class="col s12 m1 l12 l12">
-                        <h1 class=""><%=idioma.tabla %></h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <asp:Label ID="lblForms" runat="server"></asp:Label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <asp:Button ID="btnLogout" runat="server" Text="" CssClass="btn" OnClick="btnLogout_Click" />
-                    </div>
-                </div>
-                <table class="highlight">
-                    <thead>
-                        <tr>
-                            <th><%=idioma.nombre %></th>
-                            <th><%=idioma.version %></th>
-                            <th><%=idioma.precio %></th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                        </tr>
-                        <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                        </tr>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                        </tr>
-                        <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                        </tr>
-                        <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                        </tr>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                        </tr>
-                        <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                        </tr>
-                        <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                        </tr>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                        </tr>
-                        <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                        </tr>
-                        <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                        </tr>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                        </tr>
-                        <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                        </tr>
-                        <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                        </tr>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                        </tr>
-                        <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                        </tr>
-                        <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                        </tr>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                        </tr>
-                        <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                        </tr>
-                        <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                        </tr>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                        </tr>
-                        <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                        </tr>
-                        <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                        </tr>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                        </tr>
-                        <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                        </tr>
-                        <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                        </tr>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                        </tr>
-                        <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                        </tr>
-                        <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                        </tr>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
+            <div class="input-field col s6 m2 l2">
+                <input id="documento" type="text" class="validate" />
+                <label for="documento">No. documento</label>
+            </div>
+            <div class="input-field col s6 m2 l2">
+                <input id="date_ini" type="text" class="datepicker" />
+                <label for="date_ini">Fecha inicio</label>
+            </div>
+            <div class="input-field col s6 m2 l2">
+                <input id="date_fin" type="text" class="datepicker2" />
+                <label for="date_fin">Fecha fin</label>
+            </div>
+            <script>
+                var elem = document.querySelector('.datepicker');
+                var options = [];
+                var instance = M.Datepicker.init(elem, options);
+                var elem2 = document.querySelector('.datepicker2');
+                var instance2 = M.Datepicker.init(elem2, options);
+            </script>
+            <div class="input-field col s6 m3 l3">
+                <input id="cliente" type="text" class="validate" />
+                <label for="cliente">Cliente</label>
+            </div>
+            <div class="input-field col s6 m3 l3">
+                <input id="agente" type="text" class="validate" />
+                <label for="agente">Agente</label>
+            </div>
         </div>
-    </div>
-</body>
-</html>
+        <div class="row">
+            <ul id="coll_1" class="collapsible expandable">
+                <li class="active">
+                    <div class="collapsible-header">
+                        <i class="material-icons">filter_drama</i>Provisiones
+                                <span class="badge"><a class="waves-effect waves-light btn-floating btn-small" href="Provision/Nuevo.aspx"><i class="material-icons">add</i></a></span>
+                    </div>
+                    <div class="collapsible-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Documento</th>
+                                    <th>Fecha</th>
+                                    <th>Cliente</th>
+                                    <th>Agente</th>
+                                    <th>Monto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>100011</td>
+                                    <td>09/02/2018</td>
+                                    <td>9901 Nueva Walmart de México</td>
+                                    <td>G110 Francisco Maldonado</td>
+                                    <td>$ 85 000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>100012</td>
+                                    <td>10/02/2018</td>
+                                    <td>8888 Tiendas Chedraui</td>
+                                    <td>G110 Francisco Maldonado</td>
+                                    <td>$ 60 000.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <ul id="coll_2" class="collapsible expandable">
+                <li class="active">
+                    <div class="collapsible-header">
+                        <i class="material-icons">place</i>Notas de crédito
+                                <span class="badge"><a class="waves-effect waves-light btn-floating btn-small"><i class="material-icons">add</i></a></span>
+                    </div>
+                    <div class="collapsible-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Documento</th>
+                                    <th>Fecha</th>
+                                    <th>Cliente</th>
+                                    <th>Agente</th>
+                                    <th>Monto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>100011</td>
+                                    <td>09/02/2018</td>
+                                    <td>9901 Nueva Walmart de México</td>
+                                    <td>G110 Francisco Maldonado</td>
+                                    <td>$ 85 000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>100012</td>
+                                    <td>10/02/2018</td>
+                                    <td>8888 Tiendas Chedraui</td>
+                                    <td>G110 Francisco Maldonado</td>
+                                    <td>$ 60 000.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <ul id="coll_3" class="collapsible expandable">
+                <li class="active">
+                    <div class="collapsible-header">
+                        <i class="material-icons">whatshot</i>Ordenes de pago
+                                <span class="badge"><a class="waves-effect waves-light btn-floating btn-small"><i class="material-icons">add</i></a></span>
+                    </div>
+                    <div class="collapsible-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Documento</th>
+                                    <th>Fecha</th>
+                                    <th>Cliente</th>
+                                    <th>Agente</th>
+                                    <th>Monto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>100011</td>
+                                    <td>09/02/2018</td>
+                                    <td>9901 Nueva Walmart de México</td>
+                                    <td>G110 Francisco Maldonado</td>
+                                    <td>$ 85 000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>100012</td>
+                                    <td>10/02/2018</td>
+                                    <td>8888 Tiendas Chedraui</td>
+                                    <td>G110 Francisco Maldonado</td>
+                                    <td>$ 60 000.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <script>
+                var elem = document.getElementById('coll_1');
+                var options = {
+                    accordion: false
+                }
+                var instance = M.Collapsible.init(elem, options);
+                var elem2 = document.getElementById('coll_2');
+                var options = [];
+                var instance2 = M.Collapsible.init(elem2, options);
+                var elem3 = document.getElementById('coll_3');
+                var options = {
+                    accordion: false
+                }
+                var instance3 = M.Collapsible.init(elem3, options);
+        </script>
+    </form>
+</asp:Content>
